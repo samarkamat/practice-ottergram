@@ -74,13 +74,24 @@ a{
 }
 .thumbnail-list {
   flex: 0 1 auto;
-  order: 2;
+  order: 1;
   display: flex;
   list-style: none;
   padding: 0;
   white-space: nowrap;
   overflow-x: auto;
   justify-content: space-between;
+}
+.second-list {
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    order: -1;
+    padding: 0;
+  white-space: nowrap;
+  overflow-x: auto;
+  justify-content: space-between;
+
 }
 .thumbnail-item {
   display: inline-block;
@@ -105,7 +116,13 @@ a{
   color: rgb(202, 238, 255);
   font-size: 24px;
 }
+.footer-main {
+  flex: 0 0 auto;
+  order: 2;
 
+  font-size: 12px;
+  text-align: center;
+}
 @media all and (orientation: landscape) {
   .main-content {
     flex-direction: row;
@@ -115,8 +132,14 @@ a{
     flex-direction: column;
     order: 0;
     margin-left: 20px;
+    margin-bottom: 0px;
   }
-
+  .second-list {
+    flex-direction: column;
+    order: 2;
+    margin-left: 20px;
+    margin-bottom: 0px;
+  }
   .thumbnail-item {
     max-width: 260px;
   }
